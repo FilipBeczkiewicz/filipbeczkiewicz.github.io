@@ -1,0 +1,192 @@
+.header {
+  width: 85%;
+  margin: 0 auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  // padding-bottom: 3rem;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-color;
+    text-align: center;
+    margin-top: 1rem;
+    max-width: 440px;
+
+    & h1 {
+      font-size: 5rem;
+      margin: 1.5rem 0 1.8rem 0;
+      color: $white;
+      font-weight: 500;
+    }
+
+    & p {
+      letter-spacing: .05rem;
+
+    }
+  }
+
+  & .content__long {
+    font-size: 0.9375rem;
+    line-height: 1.563;
+    letter-spacing: 0;
+  }
+
+  &__explore {
+
+
+
+    z-index: 10000;
+
+    & .explore {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $white;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        height: 0px;
+        width: 0px;
+        background: #979797cc;
+        border-radius: 50%;
+        z-index: -1000;
+        transition: height .4s ease-in;
+        transition: width .4s ease;
+      }
+
+      &:hover::after {
+        height: 250px;
+        width: 250px;
+      }
+    }
+
+    & p {
+      font-family: 'Bellefair';
+      font-size: 1.25rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+@media screen and (min-width: 760px) {
+  .header {
+    margin: 5rem auto;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+
+    &__content {
+
+      & h1 {
+        font-size: 9.375rem; // chnage
+        margin: 1.3rem 0 1.6rem 0; //change
+      }
+
+      & p {
+        font-size: 1.25rem; //change
+      }
+    }
+
+    & .content__long {
+      font-size: 1rem; //change
+      line-height: 1.75rem; //change
+    }
+
+    &__explore {
+
+
+      & .explore {
+        width: 242px; // changed
+        height: 242px; // changed
+
+
+        
+      &:hover::after {
+        height: 350px;
+        width: 350px;
+      }
+      }
+
+      & p {
+        font-size: 2rem; // chnge
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .header {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    width: 80%;
+    flex-direction: row;
+
+    // padding-bottom: 3rem;
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+      margin-top: 1rem;
+      max-width: 440px;
+      height: 100%;
+
+      & h1 {
+        font-size: 9.375;
+        margin: 1.5rem 0 1.8rem 0;
+        color: $white;
+        font-weight: 500;
+      }
+
+      & p {
+        letter-spacing: .1rem; // change
+        font-size: 1.75rem; // change
+      }
+    }
+
+    & .content__long {
+      font-size: 1.125rem;
+      line-height: 2rem;
+    }
+
+    &__explore {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+
+      & .explore {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 274px; //change
+        height: 274px; //
+
+
+        &:hover::after {
+          height: 450px;
+          width: 450px;
+        }
+      }
+
+      & p {
+        font-size: 2rem;
+      }
+    }
+  }
+}

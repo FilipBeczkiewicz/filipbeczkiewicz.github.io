@@ -1,0 +1,28 @@
+.wrapper {
+  height: 100vh;
+  background: url('/jpgs/background-home-mobile.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 760px) {
+  .wrapper {
+    background: url(/jpgs/background-home-tablet.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  .wrapper {
+    background: url(/jpgs/background-home-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+}

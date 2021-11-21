@@ -1,0 +1,228 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  height: 96px;
+  font-family: 'Barlow', sans-serif;
+  &__logo {
+    
+    height: 40px;
+    width: 40px;
+    transition: all .5s;
+    & img {
+      width: 100%;
+      color: white;
+    }
+    
+    &:hover {
+      height: 55px;
+      width: 55px;
+    }
+  }
+  
+  &__links {
+    z-index: 10;
+    height: 0;
+    width: 65%;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background: #9797972c;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    transition: height .3s;
+
+    &-active {
+      height: 100%;
+    }
+
+    & li {
+      margin-left: 2rem;
+      &:not(:first-child) {
+        margin-top: 2rem;
+
+      }
+
+      &:first-child {
+        margin-top: 8rem;
+      }
+    }
+
+    & .active-page {
+      border-right: 3px solid $white;
+    }
+
+    & a {
+      color: white;
+      font-weight: 300;
+      & span {
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-right: .3rem;
+        
+      }
+
+      &:hover {
+        color: rgb(230, 230, 230);
+      }
+    }
+  }
+
+  &__hamburger {
+    height: 21px;
+    width: 24px;
+    background: url(/jpgs/icon-hamburger.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000000000;
+    transition: background .5s;
+
+    &-active {
+      background: url(/jpgs/icon-close.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1000;
+    }
+  }
+}
+
+
+@media screen and (min-width: 760px) {
+  .nav {
+    display: flex; // change
+    align-items: center; // change
+    justify-content: space-between; // change
+    width: 95%; // change
+    margin: 0 0 0 auto;
+
+    &__logo {
+
+      height: 48px; // change
+      width: 48px; // change
+      & img {
+        width: 100%;
+      }
+    }
+
+    &__links {
+      display: flex; // change
+      align-items: center; // change
+      justify-content: space-between; // change
+      height: 100%; //chnage
+      width: 65%; // change
+      max-width: 450px;
+      padding: 0 3rem; // change
+      position: relative; // chnage
+      background: hsl(232, 28, 10);
+      backdrop-filter: blur(100);
+      -webkit-backdrop-filter: none;
+      -webkit-box-shadow: 0px 4px 5px -4px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px 4px 5px -4px rgba(0, 0, 0, 1);
+      box-shadow: 0px 4px 5px -4px rgba(0, 0, 0, 1);      
+      transition: none; //change
+
+      &-active {
+        height: 100%;
+      }
+
+      & li {
+          margin-left: 0; // change
+          height: 100%;
+          line-height: 96px;
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+          transition: border-bottom .2s;
+    
+        &:hover {
+          border-bottom: 3px solid rgba(255, 255, 255, 0.473)
+        }
+
+        &:not(:first-child) {
+          margin-top: 0; // change
+        }
+
+        &:first-child {
+          margin-top: 0; // change
+        }
+      }
+
+      & .active-page::after {
+        display: none; // change
+      }
+
+      & .active-page {
+        border-bottom: 3px solid $white; // change
+        height: 100%; // change
+        line-height: 96px; // change
+        border-right: none;
+        
+      }
+
+      & a {
+        font-size: 0.875rem; // change
+
+        & span {
+          display: none; // change
+        }
+      }
+    }
+
+    &__hamburger {
+      display: none; // change
+
+      &-active {
+        display: none; // change
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  
+  .nav {
+
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 100px;
+      width: 35%;
+      height: 2px;
+      top: 75%;
+      background: #191b26;
+    }
+
+    &__logo {
+      margin-top: 3rem;
+    }
+    &__links {
+      justify-content: space-evenly; // change
+      box-shadow: none;
+      background: #9797972c;
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);  
+      margin-top: 3rem;   
+      width: 60%; 
+      max-width: 60%;
+      &-active {
+        height: 100%;
+      }
+
+      & a {
+        font-size: 1rem; // change
+
+        & span {
+          display: inline-block; // change
+        }
+      }
+    }
+
+  }
+}

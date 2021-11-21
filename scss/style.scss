@@ -1,0 +1,20 @@
+@import 'globals';
+@import 'home/home';
+@import 'nav/nav';
+@import 'home/header';
+@import 'destiny/destiny';
+@import 'destiny/destinyPlanets';
+@import 'crew/crew';
+@import 'technology/technology';
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+

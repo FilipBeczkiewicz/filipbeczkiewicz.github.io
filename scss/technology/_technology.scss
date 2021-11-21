@@ -1,0 +1,307 @@
+.wrapper__technology {
+  min-height: 100vh;
+  background: url('/jpgs/background-technology-mobile.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+.main__technology {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2rem;
+}
+
+
+.technology__container {
+  display: flex;
+  flex-direction: column;
+
+  & .technology__img {
+    display: block;
+    width: 100%;
+    height: 170px;
+
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+}
+
+.technology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 1.5rem auto 0 auto;
+  text-align: center;
+
+  &__btns {
+    margin-bottom: 1.5rem;
+    width: 152px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      background: transparent;
+      border: 1px solid rgba(121, 121, 121, 0.568);
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      transition: all .4s;
+
+      &:hover {
+        border: 1px solid $white;
+      }
+    }
+
+    & .technology__btn-active {
+      background: #fff;
+      color: #000;
+    }
+  }
+
+  &__content {
+    & .content__title {
+      font-size: 0.875rem;
+      color: rgb(192, 192, 192);
+      text-transform: uppercase;
+    }
+
+    & h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin: .5rem 0 .7rem 0;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    & .content__desc {
+      font-size: 0.938rem;
+      color: $text-color;
+      line-height: 1.563rem;
+    }
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .wrapper__technology {
+    min-height: 100vh;
+    background: url('/jpgs/background-technology-desktop.jpg'); // 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+
+  .main__technology {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0rem; //
+  }
+
+
+  .technology__container {
+    display: flex;
+    flex-direction: column;
+
+    & .technology__img {
+      margin-top: 1.2rem; // 
+      display: block;
+      width: 100%;
+      height: 310px; //
+
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+  }
+
+  .technology {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 3.5rem auto 0 auto; //
+    text-align: center;
+
+    &__btns {
+      width: 210px; //
+      height: 60px; //
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 58px; //
+        width: 58px; //
+        background: transparent;
+        border: 1px solid rgba(121, 121, 121, 0.568);
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+        transition: all .4s;
+
+      }
+
+      & .technology__btn-active {
+        background: #fff;
+        color: #000;
+      }
+    }
+
+    &__content {
+      margin-top: 1rem;
+      max-width: 458px; //
+
+      & .content__title {
+        font-size: 1rem; //
+        color: rgb(192, 192, 192);
+        text-transform: uppercase;
+      }
+
+      & h3 {
+        font-size: 2.5rem; //
+        color: #fff;
+        margin: .4em 0 .9rem 0; // 
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      & .content__desc {
+        font-size: 1rem; // 
+        color: $text-color;
+        line-height: 1.75rem; //
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1400px) {
+  .wrapper__technology {
+    min-height: 100vh;
+    background: url('/jpgs/background-technology-desktop.jpg'); // 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+
+  .main__technology {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0rem; //
+  }
+
+
+  .technology__container {
+    width: 90%;
+    margin: 0 0 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 527px;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". .";
+
+    & .technology__img {
+      grid-column: 2/3;
+      margin-top: 0rem; // 
+      display: block;
+      margin: 0 0 0 auto;
+      width: 80%;
+      height: 100%; //
+
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+  }
+
+  .technology {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin: 3.5rem 0 0 0; //
+    text-align: left;
+
+    &__btns {
+      width: 80px; //
+      height: 100%; //
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px; //
+        width: 80px; //
+        background: transparent;
+        border: 1px solid rgba(121, 121, 121, 0.568);
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+        transition: all .4s;
+        font-size: 2rem;
+
+        &:nth-child(2) {
+          margin: 1.5rem 0;
+        }
+      }
+
+      & .technology__btn-active {
+        background: #fff;
+        color: #000;
+      }
+    }
+
+    &__content {
+      margin-left:5rem;
+      margin-top: 0rem;
+      max-width: 470px; //
+      & .content__title {
+        font-size: 1rem; //
+        color: rgb(192, 192, 192);
+        text-transform: uppercase;
+      }
+
+      & h3 {
+        font-size: 3.5rem; //
+        color: #fff;
+        margin: .2rem 0 .3rem 0; // 
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      & .content__desc {
+        font-size: 1.190rem; // 
+        color: $text-color;
+        line-height: 2rem; //
+      }
+    }
+  }
+}

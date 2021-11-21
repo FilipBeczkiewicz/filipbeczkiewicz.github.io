@@ -1,0 +1,342 @@
+#article__planets {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title__destinations {
+  height: 7vh;
+  text-align: center;
+
+  & p {
+    color: $white;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .08rem;
+
+    & span {
+      color: gray;
+      margin-right: .8rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.planets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    width: 170px;
+    height: 170px;
+    transition: all .4s;
+    cursor: pointer;
+    & img {
+      width: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+
+.planet {
+  padding-bottom: 2rem;
+
+  &__buttons {
+    display: flex;
+    width: 237.5px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem auto;
+
+    & button {
+      background: none;
+      border: none;
+      outline: none;
+      color: $text-color;
+      padding-bottom: .6rem;
+      border-bottom: 3px solid transparent;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all .3s;
+      &:hover {
+        border-bottom: 3px solid $white;
+        color: $white;
+      }
+    }
+
+    & .active-btn {
+      border-bottom: 3px solid $white;
+      color: $white;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    & h2 {
+      color: $white;
+      font-size: 3.5rem;
+      font-weight: 100;
+      margin-bottom: .2rem;
+      text-transform: uppercase;
+    }
+
+    & p {
+      font-size: 1rem;
+      color: $text-color;
+      line-height: 1.563rem;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid rgba(122, 122, 122, 0.589);
+    margin-top: 2rem;
+    padding-top: 2rem;
+    font-family: 'Barlow';
+
+    & h4 {
+      color: $text-color;
+      font-size: 0.875rem;
+      font-weight: 300;
+      margin-bottom: .7rem;
+    }
+
+    & h3 {
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 300;
+      font-family: 'Bellefair';
+      font-size: 1.75rem;
+    }
+
+    & .distance {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// media queries 
+
+@media screen and (min-width: 760px) {
+  #article__planets {
+    width: 70%;
+  }
+
+  .title__destinations {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    text-align: left;
+    padding-left: 2.5rem;
+
+    & p {
+      font-size: 1.25rem;
+      letter-spacing: .08rem;
+      font-weight: 400;
+
+    }
+  }
+
+  .planets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+      width: 300px;
+      height: 300px;
+
+    }
+  }
+
+
+  .planet {
+    margin-top: .5rem;
+
+    &__buttons {
+      display: flex;
+      width: 85%;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 1.5rem auto;
+
+
+
+      & button {
+        background: none;
+        border: none;
+        outline: none;
+        color: $text-color;
+        padding-bottom: .6rem;
+        border-bottom: 3px solid transparent;
+        font-size: 0.875rem;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 3px solid $white;
+          color: $white;
+        }
+      }
+
+      & .active-btn {
+        border-bottom: 3px solid $white;
+        color: $white;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      & h2 {
+        color: $white;
+        font-size: 5rem;
+        font-weight: 100;
+        margin-bottom: .6rem;
+        text-transform: uppercase;
+      }
+
+      & p {
+        font-size: 1rem;
+        color: $text-color;
+        line-height: 1.85rem;
+      }
+    }
+
+    &__stats {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 2rem;
+      padding-top: 2rem;
+
+      & h4 {
+        font-size: 0.875rem;
+      }
+
+      & h3 {
+        font-size: 1.75rem;
+      }
+
+      & .distance {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #article__planets {
+    width: 80%;
+    margin: 0 0 0 auto;
+  }
+
+  .title__destinations {
+    height: 20vh; // change
+    padding-left: 11rem; // chnage
+
+    & p {
+      font-size: 1.75rem; // change
+      letter-spacing: 0.295rem; // change
+    }
+  }
+
+  .planets {
+    display: grid; // change
+    grid-template-columns: 1fr 1fr; // change
+    grid-template-rows: 1fr; // change
+    margin-top: 2rem;
+    &__img {
+      width: 445px; // change
+      height: 445px; // change
+    }
+  }
+
+
+  .planet {
+    margin-top: 0rem; // change
+    width: 445px;
+    &__buttons {
+
+      display: flex;
+      width: 64%;
+      align-items: center;
+      justify-content: space-between; // chang
+      margin: 0rem; // change
+
+
+
+      & button {
+        background: none;
+        border: none;
+        outline: none;
+        color: $text-color;
+        padding-bottom: .6rem;
+        border-bottom: 3px solid transparent;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 3px solid $white;
+          color: $white;
+        }
+      }
+
+      & .active-btn {
+        border-bottom: 3px solid $white;
+        color: $white;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      & h2 {
+        font-size: 6.25rem;
+        font-weight: 100;
+        margin: 2rem 0 1.5rem 0;
+        text-transform: uppercase;
+      }
+
+      & p {
+        font-size: 1.125rem;
+        color: $text-color;
+        line-height: 1.85rem;
+      }
+    }
+
+    &__stats {
+      flex-direction: row;
+      align-items: flex-start; // change
+      justify-content: flex-start; // change
+      margin-top: 3rem;
+      padding-top: 2rem;
+
+      & h4 {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+
+      & h3 {
+        font-size: 1.75rem;
+      }
+
+      & .distance {
+        margin-bottom: 0rem;
+        margin-right: 5rem;
+      }
+    }
+  }
+}

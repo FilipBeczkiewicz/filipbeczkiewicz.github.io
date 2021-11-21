@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,500&family=Bellefair&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/scss/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="destiny" class="wrapper__destination">
+        <nav class="nav">
+            <div class="nav__logo">
+                <a href="index.html"><img src="/jpgs/logo.svg" alt="logo"></a>
+            </div>
+            <ul class="nav__links">
+                <li><a href="index.html"><span>00</span> HOME</a></li>
+                <li class="active-page"><a href="destiny.html"><span>01</span> DESTINATION</a></li>
+                <li><a href="crew.html"><span>02</span> CREW</a></li>
+                <li><a href="technology.html"><span>03</span> TECHNOLOGY</a></li>
+            </ul>
+            <div class="nav__hamburger">
+
+            </div>
+        </nav>
+        <main class="main__destination">
+            <div class="title__destinations">
+                <p class=""><span>01</span> PICK YOUR DESTINATION<p>
+            </div>
+            <article id="article__planets">
+                <section id="moon" class="planets">
+                    <div class="planets__img">
+                        <img src="/jpgs/image-moon.png" alt="">
+                    </div>
+                    <div class="planet">
+                        <div class="planet__buttons">
+                            <button data-id="moon" class="btn active-btn moon">MOON</button>
+                            <button data-id="mars" class="btn mars">MARS</button>
+                            <button data-id="europa" class="btn europa">EUROPA</button>
+                            <button data-id="titan" class="btn titan">TITAN</button>
+                        </div>
+                        <div class="planet__content">
+                            <h2>MOON</h2>
+                            <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to
+                                helpregainperspective and come back refreshed. While you’re there, take in some history
+                                byvisitingthe Luna 2 and Apollo 11 landing sites.</p>
+                            <div class="planet__stats">
+                                <div class="distance">
+                                    <h4>AVG. DISTANCE</h4>
+                                    <h3>384,400 KM</h3>
+                                </div>
+                                <div class="travel">
+                                    <h4>EST. TRAVEL TIME</h4>
+                                    <h3>3 DAYS</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+    <script src="/js/nav.js"></script>
+    <script src="/js/destionation.js"></script>
+</body>
+
+</html>
